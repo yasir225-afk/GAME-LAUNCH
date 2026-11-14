@@ -1,0 +1,21 @@
+});
+}
+
+function sortGames(type,button){
+ document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+ button.classList.add('active');
+ const cards=Array.from(container.children);
+ const keys={reviews:'reviews',rating:'rating',newest:'date',price:'price'};
+ if(type==='default'){
+  cards.sort((a,b)=>a.dataset.name.localeCompare(b.dataset.name));
+ }else{
+  const key=keys[type];
+  cards.sort((a,b)=>Number(b.dataset[key])-Number(a.dataset[key]));
+  if(type==='price') cards.reverse();
+ }
+ cards.forEach(card=>container.appendChild(card));
+ searchGames();
+}
+</script>
+</body>
+</html>
