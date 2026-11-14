@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAME LAUNCH</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;
+background:radial-gradient(ellipse at center,#21190d,#080705 65%,#030303);
+color:white;font-family:Arial,sans-serif;
+display:flex;align-items:center;justify-content:center;
+text-align:center;overflow:hidden;
+}
+header{
+position:absolute;top:28px;left:7%;right:7%;
+display:flex;justify-content:space-between;
+color:#c9a65c;font-size:12px;letter-spacing:4px;
+}
+.hero{margin-top:-35px}
+.eyebrow{color:#b99a5b;letter-spacing:7px;font-size:11px}
+h1{
+font-family:Georgia,serif;
+font-size:clamp(65px,12vw,125px);
+line-height:.95;letter-spacing:3px;
+background:linear-gradient(110deg,#9e7935,#fff0bd,#c89b43,#fff0c4,#9b722b);
+-webkit-background-clip:text;color:transparent;
+text-shadow:0 12px 55px #d8ab4f22;
+}
+.controller{
+display:inline-block;width:.75em;height:.5em;
+vertical-align:0;margin:0 .02em;
+}
+.controller svg{width:100%;height:100%}
+.rule{
+width:260px;height:1px;margin:30px auto;
+background:linear-gradient(90deg,transparent,#d6ac55,transparent);
+}
+.tagline{color:#c9c0ad;letter-spacing:4px;font-size:13px}
+.categories{
+position:absolute;bottom:55px;
+display:flex;gap:15px;width:min(650px,90%);
+}
+.category{
+flex:1;padding:23px 8px;
+background:#111;border:1px solid #333;
+text-decoration:none;transition:.25s;
+}
+.category strong{font-size:15px;letter-spacing:3px}
+.category small{display:block;color:#888;margin-top:8px;font-size:9px}
+.pc strong{color:#438eff}
+.phone strong{color:#a56bff}
+.indie strong{color:#bd75ff}
+.pc:hover{border-color:#438eff;transform:translateY(-6px)}
+.phone:hover{border-color:#a56bff;transform:translateY(-6px)}
+.indie:hover{border-color:#bd75ff;transform:translateY(-6px)}
+footer{
+position:absolute;bottom:17px;
+color:#66583c;font-size:9px;letter-spacing:3px;
+}
+@media(max-width:500px){
+.categories{gap:6px;bottom:55px}
+.category{padding:17px 3px}
+.category strong{font-size:11px;letter-spacing:1px}
+.category small{font-size:8px}
+}
+</style>
+</head>
+<body>
+<header>
+<span>GL.</span>
+<span>THE NEXT LEVEL STARTS HERE</span>
+</header>
+<main class="hero">
+<div class="eyebrow">A UNIVERSE OF GAMES</div>
+<h1>GAME<br>LAU<span class="controller">
+<svg viewBox="0 0 100 66">
+<path d="M22 17h56c10 0 16 7 19 18l3 13c2 10-8 16-16 10L69 47H31L16 58C8 64-2 58 1 48l4-14c3-11 7-17 17-17Z" fill="#d6a94f" stroke="#fff0bd" stroke-width="3"/>
+<path d="M25 28v15M17.5 35.5h15" stroke="#17120a" stroke-width="5" stroke-linecap="round"/>
+<circle cx="72" cy="31" r="4" fill="#17120a"/>
+<circle cx="83" cy="41" r="4" fill="#17120a"/>
+</svg>
+</span>CH</h1>
+<div class="rule"></div>
+<div class="tagline">FIND YOUR NEXT OBSESSION</div>
+</main>
+<nav class="categories">
+<a href="#pc" class="category pc">
+<strong>PC</strong><small>WINDOWS & MAC</small>
+</a>
+<a href="#phone" class="category phone">
+<strong>PHONE</strong><small>IOS & ANDROID</small>
+</a>
+<a href="#indie" class="category indie">
+<strong>INDIE</strong><small>DISCOVER CREATORS</small>
+</a>
+</nav>
+<footer>GAME LAUNCH • YOUR NEXT GAME IS HERE</footer>
+</body>
+</html>
