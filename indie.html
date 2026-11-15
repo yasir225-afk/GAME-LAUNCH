@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indie Universe | GAME LAUNCH</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 35%, #17101f 0%, #08090d 65%);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 7%;
+  border-bottom: 1px solid #29232f;
+}
+
+.logo {
+  color: #e8bd60;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.home {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+.home:hover {
+  color: #e8bd60;
+}
+
+main {
+  width: min(850px, 90%);
+  margin: 65px auto 50px;
+  text-align: center;
+}
+
+.brand {
+  color: #e8bd60;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 28px;
+}
+
+.welcome {
+  color: #fff;
+  font-size: clamp(25px, 5vw, 36px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.gradient-title {
+  font-size: clamp(36px, 7vw, 55px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #65a8ff, #bd7aff, #e5a5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  color: #e8bd60;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.description {
+  color: #bdbac7;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 32px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #7951a5, transparent);
+  margin: 30px 0;
+}
+
+.question {
+  font-size: 21px;
+  margin-bottom: 23px;
+  letter-spacing: 1px;
+}
+
+.options {
+  display: grid;
+  gap: 15px;
+}
+
+.option {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  padding: 23px;
+  border-radius: 17px;
+  background: #141520;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.option:hover {
+  transform: translateY(-4px);
+}
+
+.option h2 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.option p {
+  color: #d1cfda;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.platform {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.pc {
+  border: 1px solid #477edb;
+  background: linear-gradient(110deg, #141b30, #11121c);
+}
+
+.pc:hover {
+  box-shadow: 0 0 25px #477edb44;
+}
+
+.pc h2, .pc .platform {
+  color: #70abff;
+}
+
+.phone {
+  border: 1px solid #9561d8;
+  background: linear-gradient(110deg, #20152d, #15121e);
+}
+
+.phone:hover {
+  box-shadow: 0 0 25px #9561d844;
+}
+
+.phone h2, .phone .platform {
+  color: #c18aff;
+}
+
+.both {
+  border: 1px solid #d2a943;
+  background: linear-gradient(110deg, #211d10, #17150f);
+}
+
+.both:hover {
+  box-shadow: 0 0 25px #d2a94344;
+}
+
+.both h2, .both .platform {
+  color: #f0cb69;
+}
+
+footer {
+  color: #9b824e;
+  text-align: center;
+  padding: 25px;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+@media(max-width: 600px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  main {
+    margin-top: 45px;
+  }
+
+  .option {
+    padding: 19px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GAME LAUNCH</div>
+  <a class="home" href="index.html">← BACK TO HOME</a>
+</header>
+
+<main>
+
+  <div class="brand">WELCOME TO THE WORLD OF GAMING</div>
+
+  <div class="welcome">WELCOME TO THE</div>
+
+  <h1 class="gradient-title">INDIE UNIVERSE</h1>
+
+  <div class="tagline">
+    UNLIMITED CREATIVITY. UNIQUE WORLDS.
+  </div>
+
+  <p class="description">
+    Discover extraordinary games created by independent
+    developers around the world. Explore new adventures
+    and find your next favourite game.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2 class="question">WHERE DO YOU WANT TO PLAY?</h2>
+
+  <div class="options">
+
+    <a href="#" class="option pc">
+      <h2>01 — PC INDIE</h2>
+      <p>
+        Explore independent games made for PC gaming.
+        Discover creative worlds and unforgettable adventures.
+      </p>
+      <div class="platform">WINDOWS • MAC</div>
+    </a>
+
+    <a href="#" class="option phone">
+      <h2>02 — PHONE INDIE</h2>
+      <p>
+        Discover incredible independent games
+        for your mobile devices.
+      </p>
+      <div class="platform">ANDROID • iOS</div>
+    </a>
+
+    <a href="#" class="option both">
+      <h2>03 — PC + PHONE</h2>
+      <p>
+        Play the same games on both PC and mobile.
+        Every game in this section supports both platforms.
+      </p>
+      <div class="platform">PC • ANDROID • iOS</div>
+    </a>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="tagline">
+    ONE WORLD. ENDLESS POSSIBILITIES.
+  </div>
+
+</main>
+
+<footer>
+  GAME LAUNCH • DISCOVER YOUR NEXT WORLD
+</footer>
+
+</body>
+</html>
