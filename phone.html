@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone Games | GAME LAUNCH</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #08090d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #292929;
+}
+
+.logo {
+  color: #e7bd63;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 5%;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero small {
+  color: #a56bff;
+  letter-spacing: 4px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 6vw, 60px);
+  color: #e7bd63;
+}
+
+.hero p {
+  color: #aaa;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.trust {
+  color: #c5a0ff;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.search {
+  margin: 35px 0 20px;
+}
+
+.search input {
+  width: 100%;
+  padding: 17px;
+  background: #151720;
+  border: 1px solid #343847;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+button {
+  background: #151720;
+  border: 1px solid #343847;
+  color: #aaa;
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.active,
+button:hover {
+  color: #c5a0ff;
+  border-color: #a56bff;
+}
+
+h2 {
+  color: #e7bd63;
+  font-family: Georgia, serif;
+  margin-bottom: 22px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.game {
+  background: #151720;
+  border: 1px solid #292d3a;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.art {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(140deg, #49336b, #11121b);
+  display: grid;
+  place-items: center;
+  color: #c5a0ff;
+  font-size: 42px;
+}
+
+.info {
+  padding: 15px;
+}
+
+.info h3 {
+  font-size: 15px;
+}
+
+.info p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.platforms {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.platform {
+  background: #252033;
+  color: #c5a0ff;
+  border: 1px solid #554078;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 10px;
+}
+
+.price {
+  color: #e7bd63;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+@media(max-width: 800px) {
+  .games {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 430px) {
+  main {
+    padding: 30px 4%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GAME LAUNCH</div>
+  <a href="index.html">← BACK TO HOME</a>
+</header>
+
+<main>
+
+<section class="hero">
+  <small>THE PHONE GAMING DESTINATION</small>
+
+  <h1>YOUR NEXT GAME IS JUST A TAP AWAY.</h1>
+
+  <p>
+    Explore the world of mobile gaming. Discover exciting titles,
+    compare game details and find your next favourite.
+  </p>
+
+  <div class="trust">
+    <span>✓ Clear game information</span>
+    <span>✓ Transparent pricing</span>
+    <span>✓ Discover new mobile games</span>
+  </div>
+</section>
+
+<div class="search">
+  <input
+    id="search"
+    type="text"
+    placeholder="Search your favourite phone games..."
+    oninput="searchGames()"
+  >
+</div>
+
+<div class="filters">
+  <button class="active" onclick="sortGames('featured',this)">Featured</button>
+  <button onclick="sortGames('reviews',this)">Most Reviewed</button>
+  <button onclick="sortGames('rating',this)">Top Rated</button>
+  <button onclick="sortGames('newest',this)">Newest</button>
+  <button onclick="sortGames('price',this)">Price: Low to High</button>
+</div>
+
+<h2>EXPLORE PHONE GAMES</h2>
+
+<div class="games" id="games">
+
+  <div class="game" data-name="Game Slot 01" data-reviews="0" data-rating="0" data-date="1" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 01</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+  <div class="game" data-name="Game Slot 02" data-reviews="0" data-rating="0" data-date="2" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 02</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+  <div class="game" data-name="Game Slot 03" data-reviews="0" data-rating="0" data-date="3" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 03</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+  <div class="game" data-name="Game Slot 04" data-reviews="0" data-rating="0" data-date="4" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 04</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+  <div class="game" data-name="Game Slot 05" data-reviews="0" data-rating="0" data-date="5" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 05</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+  <div class="game" data-name="Game Slot 06" data-reviews="0" data-rating="0" data-date="6" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 06</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+  <div class="game" data-name="Game Slot 07" data-reviews="0" data-rating="0" data-date="7" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 07</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+  <div class="game" data-name="Game Slot 08" data-reviews="0" data-rating="0" data-date="8" data-price="0">
+    <div class="art">📱</div>
+    <div class="info">
+      <h3>Coming Soon</h3>
+      <p>Game Slot 08</p>
+      <div class="platforms">
+        <span class="platform">Android</span>
+        <span class="platform">iOS</span>
+      </div>
+      <div class="price">₹ --</div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+GAME LAUNCH • DISCOVER YOUR NEXT GAME
+</footer>
+
+<script>
+const container = document.getElementById('games');
+
+function searchGames() {
+  const query = document.getElementById('search').value.toLowerCase();
+
+  document.querySelectorAll('.game').forEach(card => {
+    card.style.display =
+      card.innerText.toLowerCase().includes(query) ? '' : 'none';
+  });
+}
+
+function sortGames(type, button) {
+  document.querySelectorAll('.filters button').forEach(b => {
+    b.classList.remove('active');
+  });
+
+  button.classList.add('active');
+
+  const cards = Array.from(container.children);
+
+  const keys = {
+    reviews: 'reviews',
+    rating: 'rating',
+    newest: 'date',
+    price: 'price'
+  };
+
+  if (type === 'featured') {
+    cards.sort((a,b) =>
+      a.dataset.name.localeCompare(b.dataset.name)
+    );
+  } else {
+    const key = keys[type];
+
+    cards.sort((a,b) =>
+      Number(b.dataset[key]) - Number(a.dataset[key])
+    );
+
+    if (type === 'price') cards.reverse();
+  }
+
+  cards.forEach(card => container.appendChild(card));
+  searchGames();
+}
+</script>
+
+</body>
+</html>
